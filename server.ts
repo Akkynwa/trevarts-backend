@@ -11,15 +11,15 @@ const app = express();
 
 // app.use(cors({ origin: true }));
 // Allow everything for testing purposes
-// app.use(cors({ origin: '*' }));
-app.use(
-  cors({
-    origin: [
-      'https://trevartsyemi.vercel.app',
-      'http://localhost:5173'
-    ],
-  })
-);
+app.use(cors({ origin: '*' }));
+// app.use(
+//   cors({
+//     origin: [
+//       'https://trevartsyemi.vercel.app',
+//       'http://localhost:5173'
+//     ],
+//   })
+// );
 
 app.use(express.json());
 app.use((req, res, next) => {
